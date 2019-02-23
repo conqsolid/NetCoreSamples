@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NetCoreApi.Models;
 
 namespace NetCoreApi.Controllers
 {
@@ -12,9 +13,9 @@ namespace NetCoreApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<ItemModel>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new ItemModel[] { new ItemModel { Id = 0 } };
         }
 
         // GET api/values/5
